@@ -51,6 +51,7 @@ include ("include/db_connect.php");
 </li>
 </ul>
 </div>
+<ul id="block-tovar-grid">
 <?php
 	$result = mysql_query("SELECT * FROM db_shop",$link);
 if (mysql_num_rows($result) > 0);
@@ -59,19 +60,33 @@ if (mysql_num_rows($result) > 0);
 do
 {
 	echo '
-	<p>'.$row["title"].'</p>
-
+	<li>
+		<div class="block-images-grid" >
+		<img src="/uploads_images/'.$row["image"].'" />
+		</div>
+	<p class="style-title-grid" ><a href="">'.$row["title"].'</a></p>
+	<ul class="reviews-and-counts-grid">
+		<li><img src="/images/eye-icon.png" /></li>
+		<li><img src="/images/comment-icon.png" /></li>
+       </ul>	
+       <a class="add-cart-style-grid" ></a>
+       <p class=style-price-grid" ><strong></strong> руб.</p>
+       <div class="mini-features" >
+	'.$row["mini_features"].'
+       </div>
+	</li>
 ';
 
 }
 	while ($row = mysql_fetch_array($result));
 }
 ?>
+</ul>
 
 </div>
 
 <?php
-	include("include/block-footpr.php");
+	include("include/block-footer.php");
 ?>
 
 </div>
