@@ -62,7 +62,7 @@ do
 	echo '
 	<li>
 		<div class="block-images-grid" >
-		<img src="/uploads_images/'.$row["image"].'" />
+		<img src="/uploads_images/'.$row["images"].'" />
 		</div>
 	<p class="style-title-grid" ><a href="">'.$row["title"].'</a></p>
 	<ul class="reviews-and-counts-grid">
