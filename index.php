@@ -75,7 +75,7 @@ default:
 <li><img id="style-grid" src="/images/icon-grid.png" /><li>
 <li><img id="style-list" src="/images/icon-list.png" /><li>
 <li>Сортировать:</li>
-<li><a id="select-sort">Без сортировки</a>
+<li><a id="select-sort"><?php echo $sort_name; ?></a>
 <ul id="sorting-list">
 <li><a href="index.php?sort=price-asc" >От дешовых к дорогим</a> </li>
 <li><a href="index.php?sort=price-desc" >О дорогих к дешовым</a> </li>
